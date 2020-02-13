@@ -1,0 +1,30 @@
+{"Name": "Deny access",
+    "SchemaVersion": "v1.0",
+    "DefaultNetworkAction": "allow",
+    "DefaultProgramAction": "allow",
+    "DefaultFileAction": "allow",
+    "Rules": [
+        {
+            "Name": "Deny passwd",
+            "InActive": false,
+            "RuleType": "syscall",
+            "Program": "/bin/cat",
+            "Action": "deny",
+            "File": "",
+            "Syscall": "sys_open",
+            "Arg1": "/etc/passwd",
+            "Arg2": "",
+            "Arg3": ""
+        }
+    ],
+    "IgnoredSyscalls": [],
+    "Limits": {
+        "MaxNumProc": 0,
+        "MaxProcLife": 0,
+        "Syscalls": [],
+        "Processes": []
+    },
+    "Mode": 0,
+    "Behavioral": true,
+    "Description": "Deny access with cat to /etc/passwd with Log"
+}

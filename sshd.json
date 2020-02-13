@@ -1,0 +1,26 @@
+{"Name": "Block_sshd",
+    "SchemaVersion": "v1.0",
+    "DefaultNetworkAction": "allow",
+    "DefaultProgramAction": "allow",
+    "DefaultFileAction": "allow",
+    "Rules": [
+        {
+            "Name": "Block port 22",
+             "RuleType": "listener",
+             "ListeningPort": 22,
+             "Action": "deny",
+             "ListeningAddr": "*"
+        }
+    ],
+    "IgnoredSyscalls": [],
+    "Limits": {
+        "MaxNumProc": 0,
+        "MaxProcLife": 0,
+        "Syscalls": [],
+        "Processes": []
+    },
+    "Mode": 0,
+    "Behavioral": false,
+    "Description": "Block Any IP Address to SSHD"
+
+}

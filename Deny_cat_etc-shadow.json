@@ -1,0 +1,35 @@
+{"Name":"No Access to Shadow from cat",
+   "SchemaVersion":"v1.0",
+   "DefaultNetworkAction":"",
+   "DefaultProgramAction":"",
+   "DefaultFileAction":"",
+   "Rules":[
+      {
+         "Name":"shadow_access_deny_rule",
+         "DateCreated":"2019-11-05T00:00:00Z",
+         "DateUpdated":"2019-11-05T00:00:00Z",
+         "InActive":false,
+         "RuleType":"File",
+         "Program":"/bin/cat",
+         "Action":"deny",
+         "File":"/etc/shadow",
+         "Syscall":""
+      }
+   ],
+   "IgnoredSyscalls":[
+
+   ],
+   "Limits":{
+      "MaxNumProc":0,
+      "MaxProcLife":0,
+      "Syscalls":[
+
+      ],
+      "Processes":[
+
+      ]
+   },
+   "Mode":0,
+   "Behavioral":false,
+   "Description":"Monitor the Write event for mentioned bash files"
+}

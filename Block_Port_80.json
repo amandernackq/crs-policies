@@ -1,0 +1,25 @@
+{"Name": "Block_httpd",
+    "SchemaVersion": "v1.0",
+    "DefaultNetworkAction": "allow",
+    "DefaultProgramAction": "allow",
+    "DefaultFileAction": "allow",
+    "Rules": [
+        {
+            "Name": "Block port 80",
+             "RuleType": "listener",
+             "ListeningPort": 80,
+             "Action": "deny",
+             "ListeningAddr": "*"
+        }
+    ],
+    "IgnoredSyscalls": [],
+    "Limits": {
+        "MaxNumProc": 0,
+        "MaxProcLife": 0,
+        "Syscalls": [],
+        "Processes": []
+    },
+    "Mode": 0,
+    "Behavioral": true,
+    "Description": "Block Access to HTTPD Port 80"
+}
